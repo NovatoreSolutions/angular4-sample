@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  EventEmitter, Input, Output } from '@angular/core';
 import { Hero } from '../hero';
 @Component({
   selector: 'app-add-hero',
@@ -7,6 +7,11 @@ import { Hero } from '../hero';
 })
 export class AddHeroComponent implements OnInit {
 
+
+  @Output() hero: EventEmitter<Hero> = new EventEmitter<Hero>();
+  
+
+  
   constructor() { }
 
   ngOnInit() {
@@ -16,11 +21,15 @@ export class AddHeroComponent implements OnInit {
  powers = ['Really Smart', 'Super Flexible',
             'Super Hot', 'Weather Changer'];
  
-  model = new Hero(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
+  model = new Hero(21, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
  
   submitted = false;
  
-  onSubmit() { this.submitted = true; }
+  onSubmit() { this.submitted = true; 
+    
+    console.log("my data",this.model)
+     this.hero.emit(this.model);
+  }
  
   newHero() {
     this.model = new Hero(42, '', '');

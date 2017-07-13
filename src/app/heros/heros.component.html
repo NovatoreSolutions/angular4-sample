@@ -28,6 +28,6 @@
   <button (click)="gotoDetail()">View Details</button>
 </div>
 <!--<app-list-detail [hero]="selectedHero"></app-list-detail>-->
-<app-add-hero></app-add-hero>
+<app-add-hero   (hero)='addHero($event)' ></app-add-hero>
 
 </div>

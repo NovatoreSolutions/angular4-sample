@@ -41,5 +41,10 @@ onSelect(hero: Hero): void {
     this.router.navigate(['/detail', this.selectedHero.id]);
   }
 
+  addHero(hero: Hero):void{
+
+    this.heroes.push(hero)
+
+  }
 
 }
