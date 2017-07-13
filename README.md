@@ -1,6 +1,6 @@
-# Angular4-sample
+# Novatore Angular 4 Sample Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
+Angular 4 sample application built with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
 ## Development server
 
